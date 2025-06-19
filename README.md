@@ -52,7 +52,7 @@ The backend is supported by a well-structured **relational database schema**, le
    - Remove workers no longer active in the canteen staff
 
 3. **Order Management**
-   - View and track all orders with customer IDs, ordered items, quantity, price, and status (pending/confirmed/delivered)
+   - View and track all orders with customer IDs, ordered items, quantity, price.
 
 4. **Sales & Revenue Reporting**
    - Generate detailed reports on:
@@ -101,6 +101,9 @@ Normalization techniques (up to 3NF) were applied to minimize redundancy and enh
 - Mobile-first responsive UI for accessibility
 
 ---
+
+<img src="images/ss.png" alt="Menu Sample" width="400"/>
+
 
 ## 🧑‍💻 Developed By
 
