@@ -6,6 +6,8 @@
 
 **[Visit Project-Landing Page](https://darsana-ramesh.github.io/CanteenExpress/)**
 
+<img src="images/ss.jpeg" alt="Menu Sample" width="400"/>
+
 ## 📘 Project Summary
 
 This project report outlines the complete life cycle of the **CanteenExpress** application — including its design, implementation, and performance evaluation. The system offers:
@@ -101,8 +103,6 @@ Normalization techniques (up to 3NF) were applied to minimize redundancy and enh
 - Mobile-first responsive UI for accessibility
 
 ---
-
-<img src="images/ss.png" alt="Menu Sample" width="400"/>
 
 
 ## 🧑‍💻 Developed By
