@@ -4,7 +4,7 @@
 
 ---
 
-**[Visit Project-Landing Page]()**
+**[Visit Project-Landing Page](https://darsana-ramesh.github.io/CanteenExpress/)**
 
 ## 📘 Project Summary
 
@@ -105,4 +105,4 @@ Normalization techniques (up to 3NF) were applied to minimize redundancy and enh
 ## 🧑‍💻 Developed By
 
 **Darsana R**  
-github.com/Darsana-Ramesh
+[GitHub](github.com/Darsana-Ramesh)
