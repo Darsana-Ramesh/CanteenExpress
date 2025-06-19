@@ -11,16 +11,16 @@
 <table>
   <tr>
     <td align="center">
-      <img src="images/menu.png" alt="Menu Page" width="250"/><br/>
-      <strong>Menu Page</strong>
+      <img src="images/ss.jpeg" alt="Menu Page" width="250"/><br/>
+      <strong>Landing Page</strong>
     </td>
     <td align="center">
-      <img src="images/order.png" alt="Order Page" width="250"/><br/>
-      <strong>Order Placement</strong>
+      <img src="images/admin.png" alt="Order Page" width="250"/><br/>
+      <strong>Admin DashBoard</strong>
     </td>
     <td align="center">
-      <img src="images/dashboard.png" alt="User Dashboard" width="250"/><br/>
-      <strong>User Dashboard</strong>
+      <img src="images/user.png" alt="User Dashboard" width="250"/><br/>
+      <strong>User Page</strong>
     </td>
   </tr>
 </table>
