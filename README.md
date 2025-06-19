@@ -8,7 +8,8 @@
 
 <p align="center">
   <img src="images/ss.jpeg" alt="Menu" width="300" style="margin-right: 10px;"/>
-  <img src="images/order.png" alt="Order Page" width="300"/>
+  <img src="images/user.png" alt="Order Page" width="300"/>
+  <img src="images/admin.png" alt="Order Page" width="300"/>
 </p>
 
 
