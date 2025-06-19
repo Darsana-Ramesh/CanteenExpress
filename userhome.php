@@ -59,7 +59,7 @@ if (!isset($_SESSION["username"])) {
                 while ($row = $result->fetch_assoc()) {
                     ?>
                     <div class="food-item-card">
-                        <img src="welcome2.jpg" alt="<?php echo htmlspecialchars($row['item_name']); ?>">
+                       
                         <div class="card-content">
                             <div>
                                 <h3><?php echo htmlspecialchars($row['item_name']); ?></h3>
