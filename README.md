@@ -10,15 +10,15 @@
 
 <table>
   <tr>
-    <td align="top">
+    <td>
       <img src="images/ss.jpeg" alt="Menu Page" width="250"/><br/>
       <strong>Landing Page</strong>
     </td>
-    <td align="top">
+    <td>
       <img src="images/admin.png" alt="Order Page" width="250"/><br/>
       <strong>Admin DashBoard</strong>
     </td>
-    <td align="top">
+    <td>
       <img src="images/user.png" alt="User Dashboard" width="250"/><br/>
       <strong>User Page</strong>
     </td>
