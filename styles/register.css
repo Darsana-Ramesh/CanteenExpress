@@ -1,0 +1,357 @@
+:root {
+    --primary-color: #D95A00;
+    /* Burnt Orange - Warm, Appetizing */
+    --secondary-color: #006064;
+    /* Dark Teal - Sophisticated contrast */
+    --accent-color: #FFB300;
+    /* Amber Yellow - Bright, Energetic */
+    --danger-color: #dc3545;
+    /* Red for delete/warning actions */
+    --background-light: #FAFAFA;
+    /* Very light gray, subtle background */
+    --background-white: #FFFFFF;
+    /* Crisp white for sections/cards */
+    --background-dark: #212121;
+    /* Deep Charcoal - for navbar/footer */
+    --card-background: #FFFFFF;
+    /* White for cards */
+    --text-dark: #333333;
+    /* Dark gray for general text */
+    --text-light: #FFFFFF;
+    /* Pure White for light text on dark backgrounds */
+    --border-color: #e9ecef;
+    /* Light border for separation */
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --shadow-medium: rgba(0, 0, 0, 0.18);
+}
+
+body {
+    background-image: url('../images/welcome1.png');
+    background-size: cover;
+    background-position: center;
+    /* Changed for header integration */
+    display: flex;
+    flex-direction: column;
+    /* Stack header and content vertically */
+    justify-content: flex-start;
+    /* Start content from the top */
+    align-items: center;
+    /* Center horizontally */
+    min-height: 100vh;
+    /* Ensure body takes full viewport height */
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    /* Consistent font */
+    color: var(--text-dark);
+    /* Using variable */
+}
+
+/* Header Styles (similar to previous login-header) */
+.page-header {
+    /* Renamed class to be generic for any page */
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    padding: 18px 40px;
+    width: 100%;
+    /* Make header span full width */
+    display: flex;
+    justify-content: space-between;
+    /* Space out logo and any other elements */
+    align-items: center;
+    box-shadow: 0 4px 10px var(--shadow-medium);
+    position: sticky;
+    /* Keep header at the top */
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    /* Include padding in width */
+}
+
+.page-header .logo {
+    display: flex;
+    /* For aligning logo image with optional text */
+    align-items: center;
+    text-decoration: none;
+    /* Remove underline from logo link */
+    transition: opacity 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+.page-header .logo:hover {
+    opacity: 0.9;
+    /* Subtle dim on hover */
+}
+
+/* Style for the logo image */
+.page-header .logo img {
+    height: 50px;
+    /* Adjust height as needed */
+    width: auto;
+    /* Maintain aspect ratio */
+    vertical-align: middle;
+}
+
+/* Container to center the login box below the header */
+.main-content-wrapper {
+    flex-grow: 1;
+    /* Allows this wrapper to take remaining space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* Ensure it spans full width */
+    padding: 20px;
+    /* Add some padding around the container */
+    box-sizing: border-box;
+    /* Include padding in width */
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.1);
+    /* transparent white */
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(10px);
+    /* glass blur effect */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 100%;
+    /* Make it responsive */
+    max-width: 600px;
+    /* Set max-width */
+    display: flex;
+    flex-direction: column;
+    /* Stack sections if needed on small screens */
+    box-sizing: border-box;
+    /* Include padding in width */
+}
+
+.login-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.login-section h2 {
+    text-align: center;
+    font-size: 2.2em;
+    /* Increased font size */
+    margin-bottom: 25px;
+    /* More space */
+    color: var(--text-light);
+    /* Use primary color */
+    font-family: 'Montserrat', sans-serif;
+    /* Consistent font */
+    font-weight: 700;
+    /* Bolder */
+}
+
+.form-group {
+    margin-bottom: 20px;
+    /* More spacing */
+}
+
+.form-group input {
+
+    width: calc(100% - 10px);
+    /* Account for padding */
+    padding: 12px;
+    /* More padding */
+    border: 1px solid var(--border-color);
+    /* Use variable */
+    border-radius: 5px;
+    /* Consistent border-radius */
+    background: var(--background-white);
+    /* Use variable */
+    color: var(--text-dark);
+    /* Use variable */
+    font-size: 1em;
+    box-sizing: border-box;
+    /* Crucial for width calculation */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+    /* Highlight on focus */
+    box-shadow: 0 0 0 3px rgba(217, 90, 0, 0.25);
+    outline: none;
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    /* More padding */
+    background-color: var(--primary-color);
+    /* Use variable */
+    color: var(--text-light);
+    /* Use variable */
+    border: none;
+    border-radius: 5px;
+    /* Consistent border-radius */
+    cursor: pointer;
+    font-size: 1.1em;
+    /* Larger font */
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    /* Add margin to separate from inputs */
+}
+
+.login-button:hover {
+    background-color: #B24500;
+    /* Darker primary */
+    transform: translateY(-1px);
+}
+
+p {
+    color: var(--text-light);
+    /* Better contrast on background */
+    text-align: center;
+    margin-top: 20px;
+    /* Space above paragraph */
+    font-size: 0.95em;
+}
+
+a {
+    color: var(--accent-color);
+    /* Use accent color for links */
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+    color: #FFCD38;
+    /* Lighter accent on hover */
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .page-header {
+        padding: 15px 20px;
+    }
+
+    .page-header .logo img {
+        height: 40px;
+    }
+
+    .login-container {
+        max-width: 90%;
+        /* Adjust width for smaller screens */
+        padding: 25px;
+    }
+
+    .login-section h2 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    .form-group input {
+        padding: 10px;
+    }
+
+    .login-button {
+        padding: 10px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header {
+        padding: 10px 15px;
+    }
+
+    .page-header .logo img {
+        height: 35px;
+    }
+
+    .login-container {
+        flex-direction: column;
+        /* Stack sections on very small screens */
+        max-width: 95%;
+        padding: 20px;
+    }
+
+    .login-section {
+        padding: 15px;
+    }
+
+    .login-section h2 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .form-group input {
+        padding: 8px;
+    }
+}
+
+
+
+/* customer_login */
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease-in-out;
+}
+
+.popup-overlay.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    transform: scale(0.9);
+    transition: transform 0.3s ease-in-out;
+}
+
+.popup-overlay.show .popup-content {
+    transform: scale(1);
+}
+
+.popup-content h3 {
+    color: #171747;
+    /* Dark blue from your original PHP echo */
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.popup-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.popup-content .popup-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: lightblue;
+    /* From your original PHP echo */
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.popup-content .popup-button:hover {
+    background-color: #90ee90;
+    /* A slightly darker light blue on hover */
+}

@@ -1,0 +1,336 @@
+/* CSS Variables for a consistent color palette */
+:root {
+    --primary-color: #D95A00;
+    /* Burnt Orange - Warm, Appetizing */
+    --secondary-color: #006064;
+    /* Dark Teal - Sophisticated contrast */
+    --accent-color: #FFB300;
+    /* Amber Yellow - Bright, Energetic */
+    --danger-color: #dc3545;
+    /* Red for delete/warning actions (retained standard red for safety) */
+    --background-light: #FAFAFA;
+    /* Very light gray, subtle background */
+    --background-white: #FFFFFF;
+    /* Crisp white for sections/cards */
+    --background-dark: #212121;
+    /* Deep Charcoal - for navbar/footer, matches hero image */
+    --card-background: #FFFFFF;
+    /* White for cards */
+    --text-dark: #333333;
+    /* Dark gray for general text */
+    --text-light: #FFFFFF;
+    /* Pure White for light text on dark backgrounds */
+    --border-color: #e9ecef;
+    /* Light border for separation (retained light grey for subtlety) */
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --shadow-medium: rgba(0, 0, 0, 0.18);
+    /* Slightly more prominent shadows */
+}
+
+/* Base Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    /* Added for main content to push footer to bottom if any */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px var(--shadow-medium);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    /* Remove font-related properties as the logo is now an image */
+    /* font-family: 'Montserrat', sans-serif; */
+    /* font-size: 1.8em; */
+    /* font-weight: 700; */
+    /* color: var(--primary-color); */
+    /* letter-spacing: 0.5px; */
+
+    /* Transition is for the anchor, not the image hover itself */
+    transition: none;
+    /* No color transition on hover for the anchor if it only contains an image */
+
+    /* Added flex to align image if needed with other content inside .logo */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Space between logo image and any other elements if added later */
+}
+
+header .logo:hover {
+    /* No direct color change on logo hover if it's an image. */
+    /* You might add a subtle transform or filter effect to the .header-logo-img instead. */
+    /* color: #B24500; */
+}
+
+/* NEW CSS for the logo image within the header */
+.logo .header-logo-img {
+    height: 50px;
+    /* Adjust this value to your desired logo height */
+    width: auto;
+    /* Ensures the image scales proportionally */
+    vertical-align: middle;
+    /* Helps align the image if there's text or icons next to it */
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-info span {
+    font-size: 1em;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.logout-btn {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logout-btn:hover {
+    background-color: #B24500;
+    /* Darker primary */
+    transform: translateY(-1px);
+}
+
+.logout-btn i {
+    font-size: 0.9em;
+}
+
+/* Main Content Grid */
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    flex-grow: 1;
+    /* Allows main content to grow and push footer down */
+}
+
+/* Dashboard Card Sections */
+.dashboard-card {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px var(--shadow-light);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px var(--shadow-medium);
+}
+
+.dashboard-card .icon-container {
+    width: 90px;
+    height: 90px;
+    background-color: var(--primary-color);
+    /* Default icon background */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    color: var(--text-light);
+    font-size: 2.8em;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-card:hover .icon-container {
+    background-color: var(--accent-color);
+    /* Change color on hover to Amber Yellow */
+}
+
+.dashboard-card h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6em;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.dashboard-card p {
+    font-size: 0.95em;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    min-height: 40px;
+    /* Ensure consistent card height */
+}
+
+.dashboard-card .action-link {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dashboard-card .action-link:hover {
+    background-color: #B24500;
+    /* Darker primary on hover */
+    transform: translateY(-2px);
+}
+
+/* Specific icon background colors for variety (adjusted to new palette) */
+#workers .icon-container {
+    background-color: var(--secondary-color);
+}
+
+/* Dark Teal */
+#menu .icon-container {
+    background-color: var(--accent-color);
+}
+
+/* Amber Yellow */
+#orders .icon-container {
+    background-color: var(--primary-color);
+}
+
+/* Burnt Orange */
+#sales .icon-container {
+    background-color: var(--secondary-color);
+}
+
+/* Dark Teal for contrast */
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        /* No flex-direction change here as it's not a column layout like admin-header */
+    }
+
+    /* Adjusted for the logo image height */
+    .logo .header-logo-img {
+        height: 40px;
+        /* Smaller height on medium screens */
+    }
+
+    /* Removed font-size from header .logo as it's now an image */
+    /* header .logo {
+            font-size: 1.6em;
+        } */
+    .logout-btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    main {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding: 20px 15px;
+        gap: 20px;
+    }
+
+    .dashboard-card {
+        padding: 25px;
+    }
+
+    .dashboard-card .icon-container {
+        width: 70px;
+        height: 70px;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .dashboard-card h2 {
+        font-size: 1.4em;
+    }
+
+    .dashboard-card p {
+        font-size: 0.9em;
+        min-height: 35px;
+    }
+
+    .dashboard-card .action-link {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        /* Stack logo and user-info on small screens */
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    header .logo {
+        margin-bottom: 10px;
+        /* Add space between logo and user-info when stacked */
+    }
+
+    /* Adjusted for the logo image height */
+    .logo .header-logo-img {
+        height: 35px;
+        /* Even smaller height on extra small screens */
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        /* Single column layout */
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    .dashboard-card {
+        padding: 20px;
+    }
+
+    .dashboard-card .icon-container {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+
+    .dashboard-card h2 {
+        font-size: 1.3em;
+    }
+
+    .dashboard-card p {
+        min-height: auto;
+        /* Allow height to adjust */
+    }
+}

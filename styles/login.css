@@ -1,0 +1,219 @@
+:root {
+    --primary-color: #D95A00;
+    /* Burnt Orange - Warm, Appetizing */
+    --secondary-color: #006064;
+    /* Dark Teal - Sophisticated contrast */
+    --accent-color: #FFB300;
+    /* Amber Yellow - Bright, Energetic */
+    --danger-color: #dc3545;
+    /* Red for delete/warning actions */
+    --background-light: #FAFAFA;
+    /* Very light gray, subtle background */
+    --background-white: #FFFFFF;
+    /* Crisp white for sections/cards */
+    --background-dark: #212121;
+    /* Deep Charcoal - for navbar/footer */
+    --card-background: #FFFFFF;
+    /* White for cards */
+    --text-dark: #333333;
+    /* Dark gray for general text */
+    --text-light: #FFFFFF;
+    /* Pure White for light text on dark backgrounds */
+    --border-color: #e9ecef;
+    /* Light border for separation */
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --shadow-medium: rgba(0, 0, 0, 0.18);
+}
+
+body {
+    background-color: var(--background-light);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../images/welcome1.png');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-dark);
+}
+
+
+.login-header {
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    padding: 18px 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px var(--shadow-medium);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.login-header .logo {
+    display: flex;
+    align-items: center;
+}
+
+
+.login-header .logo img {
+    height: 50px;
+    width: auto;
+    vertical-align: middle;
+}
+
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-sizing: border-box;
+    /* Include padding in width */
+    margin: 20px;
+    /* Add some margin for smaller screens */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    /* Slightly more padding for better touch targets */
+    margin: 10px 0;
+    /* More margin for spacing */
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    /* Using variable */
+    border-radius: 5px;
+    /* Slightly more rounded corners */
+    background: var(--background-white);
+    /* Using variable */
+    color: var(--text-dark);
+    /* Using variable */
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: var(--primary-color);
+    /* Highlight on focus */
+    box-shadow: 0 0 0 3px rgba(217, 90, 0, 0.25);
+    outline: none;
+}
+
+p {
+    color: var(--text-light);
+    /* Match header text color for better contrast on background */
+    text-align: center;
+    /* Center the paragraph */
+    margin-top: 20px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    /* Consistent padding */
+    margin-top: 20px;
+    /* More margin */
+    background-color: var(--primary-color);
+    /* Using variable */
+    color: var(--text-light);
+    /* Using variable */
+    border: none;
+    border-radius: 5px;
+    /* Consistent border-radius */
+    cursor: pointer;
+    font-size: 1.1em;
+    /* Slightly larger font */
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #B24500;
+    /* Darker primary */
+    transform: translateY(-1px);
+}
+
+h1 {
+    color: var(--text-light);
+    /* Made login heading primary color */
+    font-family: 'Montserrat', sans-serif;
+    /* Consistent font */
+    font-size: 2em;
+    /* Larger heading */
+    margin-bottom: 25px;
+    /* Space below heading */
+}
+
+a {
+    color: var(--accent-color);
+    /* Using accent color for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #FFCD38;
+    /* Lighter amber on hover */
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .login-header {
+        padding: 15px 20px;
+    }
+
+    .login-header .logo img {
+        height: 40px;
+    }
+
+    form {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-header {
+        padding: 10px 15px;
+    }
+
+    .login-header .logo img {
+        height: 35px;
+    }
+
+    form {
+        padding: 20px;
+        margin: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    input[type="submit"] {
+        font-size: 1em;
+    }
+}
