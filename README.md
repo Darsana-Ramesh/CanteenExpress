@@ -6,7 +6,11 @@
 
 **[Visit Project-Landing Page](https://darsana-ramesh.github.io/CanteenExpress/)**
 
-<img src="images/ss.jpeg" alt="Menu Sample" width="400"/>
+<p align="center">
+  <img src="images/ss.jpeg" alt="Menu" width="300" style="margin-right: 10px;"/>
+  <img src="images/order.png" alt="Order Page" width="300"/>
+</p>
+
 
 ## 📘 Project Summary
 
