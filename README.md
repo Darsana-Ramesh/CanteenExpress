@@ -1,4 +1,4 @@
-# 🧾 CanteenExpress – Canteen Management System
+# CanteenExpress – Canteen Management System
 
 **CanteenExpress** is a full-featured, web-based Canteen Management System (CMS) designed to digitalize and streamline the food ordering and administrative operations of a canteen. The system caters to both **regular customers** as end users and **canteen administrators** as system managers.
 
@@ -6,7 +6,7 @@
 
 **[Visit Project-Landing Page](https://darsana-ramesh.github.io/CanteenExpress/)**
 
-## 📷 Screenshots
+## Screenshots
 
 <table>
   <tr>
@@ -27,7 +27,7 @@
 
 
 
-## 📘 Project Summary
+## Project Summary
 
 This project report outlines the complete life cycle of the **CanteenExpress** application — including its design, implementation, and performance evaluation. The system offers:
 
@@ -38,7 +38,7 @@ The backend is supported by a well-structured **relational database schema**, le
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 - Facilitate digital ordering for canteen users
 - Centralize food, order, and worker management for administrators
@@ -47,9 +47,9 @@ The backend is supported by a well-structured **relational database schema**, le
 
 ---
 
-## ⚙️ Functional Overview
+## Functional Overview
 
-### 👤 User Functionalities
+### User Functionalities
 
 1. **User Registration & Authentication**
    - Secure account creation with details like name, email-ID, and contact info
@@ -62,7 +62,7 @@ The backend is supported by a well-structured **relational database schema**, le
 
 ---
 
-### 🛠️ Admin Functionalities
+### Admin Functionalities
 
 1. **Food Management**
    - Add/update/delete food items including name, price, and description
@@ -83,9 +83,9 @@ The backend is supported by a well-structured **relational database schema**, le
 
 ---
 
-## 🧪 System Architecture
+## System Architecture
 
-### 📊 Conceptual Data Model
+### Conceptual Data Model
 
 The schema supports core entities such as:
 
@@ -99,9 +99,9 @@ Normalization techniques (up to 3NF) were applied to minimize redundancy and enh
 
 ---
 
-## 🧾 Non-Functional Requirements
+## Non-Functional Requirements
 
-### 🧱 Software Specifications
+### Software Specifications
 
 | Component        | Specification                               |
 |------------------|-------------------------------------------- |
@@ -113,7 +113,7 @@ Normalization techniques (up to 3NF) were applied to minimize redundancy and enh
 
 ---
 
-### 🛡️ Security & Performance
+### Security & Performance
 
 - Session-based user authentication and authorization
 - Sanitized form inputs to prevent SQL injection
@@ -124,7 +124,7 @@ Normalization techniques (up to 3NF) were applied to minimize redundancy and enh
 ---
 
 
-## 🧑‍💻 Developed By
+## Developed By
 
 **Darsana R**  
 
